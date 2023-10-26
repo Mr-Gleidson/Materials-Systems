@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <title>Cadastro de Materiais</title>
+</head>
+<body>
+    <nav id="menu-h">
+        <ul>
+            <li><a href="C:\diretorio">Home</a></li>
+            <li><a href="#">Lista de Materiais</a></li>
+            <li><a href="C:\diretorio">Cadastro de Materiais</a></li>
+            <li><a href="#">Defina o Seu Cabo</a></li>
+        </ul>
+    </nav>
+    <div class="corpo">
+        <div>
+            <h1 id="titulo">Cadastro de Materiais</h1>
+            <p id="subtitulo">Complete todas as informações</p>
+        </div>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="codigo"><strong>Código</strong></label>
+                    <input type="text" name="codigo" id="codigo" placeholder="Código do material..." required>
+                </div>
+                <div class="campo">
+                    <label for="quantidade"><strong>Quantidade</strong></label>
+                    <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade do material..." required>
+                </div>
+                <div class="campo">
+                    <label for="unidade"><strong>Unidade</strong></label>
+                    <select id="unidade" required>
+                        <option disabled selected value="">Selecione</option>
+                        <option>Metro(s)</option>
+                        <option>Unidade(s)</option>
+                        <option>Cento</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div class="campo">
+                <label for="descricao"><strong>Descrição do Material</strong></label>
+                <input type="text" name="descricao" id="descricao" placeholder="Descreva o material de acordo com o fornecedor..." required>
+            </div>
+            <div class="campo">
+                <label for="valor"><strong>Valor</strong></label>
+                <input type="text" name="valor" id="valor" placeholder="R$..." required>
+            </div>
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong>Qual a Finalidade Desse Material?</strong></label><br><br>
+                    <input type="checkbox" id="eletrica" name="finalidade" value="Eletrica">
+                    <label for="eletrica">Engenharia Elétrica</label>
+                    <input type="checkbox" id="mecanica" name="finalidade" value="Mecanica">
+                    <label for="mecanica">Engenharia Mecânica</label>
+                    <input type="checkbox" id="seguranca" name="finalidade" value="Seguranca">
+                    <label for="seguranca">Engenharia de Segurança do Trabalho</label>
+                </div>
+            </fieldset>
+            <div class="campo">
+                <label for="finalidade"><strong>Qual a Finalidade do Material?</strong></label>
+                <select id="finalidade" required>
+                    <option disabled selected value="">Selecione</option>
+                    <option>Infraestrutura</option>
+                    <option>Montagem de Quadro de Comando</option>
+                    <option>Montagem de Quadro de Potência</option>
+                    <option>Manutenção de Subestação</option>
+                </select>
+            </div>
+            <div class="campo">
+                <br>
+                <label for="observacao"><strong>Observação:</strong></label>
+                <textarea rows="6" style="width: 26em" id="observacao" name="observacao" placeholder="Insira aqui qualquer observação que julgar interessante sobre o material..."></textarea>
+            </div>
+            <button class="botao" type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
